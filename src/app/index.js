@@ -52,6 +52,17 @@ export default function Inicio() {
     //--------------------------------------------------
     //BLOCO 2.1- Seção jogos
      //--------------------------------------------------
+
+      <text style={style.secaoTitulo}>jogos em Destaques</text>
+     {/* Exibe o texto "jogos em Destaques" com estilo de secaoTitulo */}
+    <FlatList
+        data={destaques}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => <GameCard jogo={item} />}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+    />
+    {/* FlatList é um componente que exibe uma lista de itens, neste caso os jogos em destaque, de forma horizontal */}
         </ScrollView>
 
         
